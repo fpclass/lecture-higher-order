@@ -5,7 +5,7 @@
 
 module Lecture7 where
 
-import Prelude hiding ( map, filter, and, product, length, foldr, foldl, (.)
+import Prelude hiding ( map, filter, and, product, length, foldr, foldl
                       , curry, uncurry )
 import Data.Char (isUpper)
 
@@ -145,6 +145,12 @@ length'' = foldl (\n x -> n + 1) 0
 --------------------------------------------------------------------------------
 -- count
 
--- count 't' "witter" => 2
+count :: Eq a => a -> [a] -> Int
+count x [] = 0
+count x (y:ys) | x==y = 1 + count x ys
+               | otherwise = count x ys
+
+count' :: Eq a => a -> [a] -> Int
+count' x = length . filter (==x)
 
 --------------------------------------------------------------------------------

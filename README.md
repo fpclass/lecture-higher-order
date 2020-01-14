@@ -1,2 +1,3 @@
-# lecture7
-Code shown in the seventh CS141 lecture.
+# Lecture: Higher-order functions.
+
+Code shown in the CS141 lecture on higher-order functions.

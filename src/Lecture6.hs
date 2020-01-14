@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 -- Functional Programming (CS141)                                             --
--- Lecture 7: Higher-order functions                                          --
+-- Lecture: Higher-order functions                                            --
 --------------------------------------------------------------------------------
 
-module Lecture7 where
+module Lecture6 where
 
 import Prelude hiding ( map, filter, and, product, length, foldr, foldl, (.)
                       , curry, uncurry )

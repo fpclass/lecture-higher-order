@@ -5,7 +5,7 @@
 
 module Lecture6 where
 
-import Prelude hiding ( map, filter, and, product, length, foldr, foldl, (.)
+import Prelude hiding ( map, filter, and, product, length, foldr
                       , curry, uncurry )
 import Data.Char (isUpper)
 
@@ -128,23 +128,5 @@ product' = foldr (*) 1
 
 length' :: [a] -> Int
 length' = foldr (\x n -> n + 1) 0
-
-foldl :: (b -> a -> b) -> b -> [a] -> b
-foldl f z []     = z
-foldl f z (x:xs) = f (foldl f z xs) x
-
-and'' :: [Bool] -> Bool
-and'' = foldl (&&) True
-
-product'' :: Num a => [a] -> a
-product'' = foldl (*) 1
-
-length'' :: [a] -> Int
-length'' = foldl (\n x -> n + 1) 0
-
---------------------------------------------------------------------------------
--- count
-
--- count 't' "witter" => 2
 
 --------------------------------------------------------------------------------

@@ -3,7 +3,7 @@
 -- Lecture: Higher-order functions                                            --
 --------------------------------------------------------------------------------
 
-module Lecture6 where
+module Lecture where
 
 import Prelude hiding ( map, filter, and, product, length, foldr
                       , curry, uncurry )
